@@ -1,0 +1,10 @@
+<p class="name" *ngIf="name">{{name}}</p>
+<ul>
+  <li *ngFor="let number of numbers">{{number}}</li>
+</ul>
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchDefault>Zero</div>
+</div>

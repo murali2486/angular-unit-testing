@@ -1,16 +1,30 @@
+import { TemplateFormsComponent } from './template-forms/template-forms.component';
+import { InterpolationTestingComponent } from './interpolation-testing/interpolation-testing.component';
+import { StringTestingComponent } from './string-testing/string-testing.component';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsTestingComponent } from './reactive-forms-testing/reactive-forms-testing.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        StringTestingComponent,
+        InterpolationTestingComponent,
+        TemplateFormsComponent,
+        ReactiveFormsTestingComponent
       ],
+      providers: [
+        FormBuilder
+      ]
     }).compileComponents();
   });
 

@@ -1,0 +1,4 @@
+<form #form="ngForm">
+  <input type="text" name="enoModel" [(ngModel)]="eno" #enoModel="ngModel" required/>
+  <div *ngIf="enoModel.invalid" class="validation-error">Eno field is required.</div>
+</form>

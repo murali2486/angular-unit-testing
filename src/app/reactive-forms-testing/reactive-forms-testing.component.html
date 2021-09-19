@@ -1,0 +1,10 @@
+<form [formGroup]="myform">
+  Input <input type="text" formControlName="name" />
+  <div formArrayName="locations" *ngFor="let location of locations.controls; let i=index">
+      <div [formGroupName]="i">
+          name <input type="text" formControlName= "name" /><br />
+          description<input type="text" formControlName="description" /><br />
+          price<input type="text" formControlName="price" /><br />
+      </div>
+  </div>
+</form>
